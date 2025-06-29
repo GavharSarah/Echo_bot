@@ -2,7 +2,7 @@
 
 
 
-Echo Bot is a simple Telegram bot built with Python and aiogram. It replies to every message with the same message—ideal for testing or learning.
+Echo Bot is a simple Telegram bot built with Python and aiogram. It replies to every message with the same message—ideal for testing or learning.It also has startup and shutdown functions which lets user know  when  the bot  started working and what time stopped 
 
 ## Features
 - Echoes text messages

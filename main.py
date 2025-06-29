@@ -1,5 +1,13 @@
 from aiogram import Bot, Dispatcher, types
 from asyncio import run
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()  # Load variables from .env
+
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+
 db=Dispatcher()
 
 
@@ -9,7 +17,7 @@ async def echo(message:types.Message,bot:Bot):
 
 async def start():
     db.message.register(echo)
-    bot=Bot(token="7832835307:AAFk8WjtezHe6TzMPdgJg6Q9UMVx957sQ8A")
-    await db.start_polling(bot,polling_timeout=0.5)
+    bot=Bot(token=TOKEN)
+    await db.start_polling(bot,polling_timeout=1)
 
 run(start())
